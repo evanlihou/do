@@ -65,3 +65,9 @@ small {
   display: block;
   font-style: italic;
 }
+
+@media screen and (max-width: 550px) {
+  input[type="text"] {
+    width: 100%;
+  }
+}

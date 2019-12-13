@@ -1,0 +1,8 @@
+.container.task {
+  @media screen and (max-width: 550px) {
+    .checkbox-container {
+      display: block;
+      margin-bottom: 1em;
+    }
+  }
+}

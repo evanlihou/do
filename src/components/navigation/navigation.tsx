@@ -54,6 +54,7 @@ class NavigationComponent extends React.Component<
         </ul>
         <div className="quick-add">
           <input
+            type="text"
             onKeyUp={e => this.handleQuickAddKeyup(e)}
             placeholder="Quick add..."
           ></input>

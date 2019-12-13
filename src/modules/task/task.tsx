@@ -84,10 +84,12 @@ class TaskComponent extends React.Component<ITaskProps, ITaskState> {
                 </span>
               </label>
               <input
+                type="text"
                 value={this.props.task.what}
                 onChange={e =>
                   this.handleWhatChange(e.target.value, this.props.task)
                 }
+                id="taskWhat"
               ></input>
             </h2>
             <div className="container">

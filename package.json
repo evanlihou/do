@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --open --config configs/webpack.dev.js",
     "build:dev": "webpack --config configs/webpack.dev.js -d",
-    "build:prod": "webpack --config configs/webpack.prod.js"
+    "build:prod": "webpack --config configs/webpack.prod.js && cp public/index.html public/200.html"
   },
   "author": "evanlihou",
   "license": "MIT",

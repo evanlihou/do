@@ -25,10 +25,10 @@ export class Account extends React.Component<IAccountProps, IAccountState> {
         </p>
         <form>
           <label htmlFor="accountName">Name:</label>
-          <input defaultValue="John Doe" id="accountName" />
+          <input type="text" defaultValue="John Doe" id="accountName" />
 
           <label htmlFor="accountEmail">Email:</label>
-          <input defaultValue="j@johndoe.me" id="accountEmail" />
+          <input type="text" defaultValue="j@johndoe.me" id="accountEmail" />
         </form>
       </div>
     );
