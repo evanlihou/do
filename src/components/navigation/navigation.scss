@@ -1,52 +1,54 @@
 @import "../../styles/variables";
 nav.main-nav {
-    background-color: $brand-bg-color;
-    color: $brand-text-color;
-    display: flex;
+  background-color: $brand-bg-color;
+  color: $brand-text-color;
+  display: flex;
 
-    align-items: center;
+  align-items: center;
 
-    padding: 0 5%;
+  padding: 0 5%;
 
-    ul {
-        list-style: none;
+  ul {
+    list-style: none;
 
-        li {
-            display: inline;
+    li {
+      display: inline;
 
-            a {
-                text-decoration: none;
-            }
-        }
-    }
-
-    .quick-add {
-        margin: 0 auto;
-        flex-grow: 1;
-        padding: 0 30px;
-
-        input {
-            width: 100%;
-            padding: 5px;
-            background-color: rgb(209, 207, 207);
-            border: none;
-        }
-    }
-
-    .account-button {
-        padding-left: 30px;
-    }
-    
-    ul.right-nav {
-        justify-self: flex-end;
-    }
-    a, a:visited, a:active {
-        color: $brand-text-color;
+      a {
         text-decoration: none;
+      }
     }
-    
-    a:hover {
-        color: darken($brand-text-color, 20%);
-        text-decoration: underline;
+  }
+
+  .quick-add {
+    margin: 0 auto;
+    flex-grow: 1;
+    padding: 0 30px;
+
+    input {
+      width: 100%;
+      padding: 5px;
+      background-color: rgb(209, 207, 207);
+      border: none;
     }
+  }
+
+  .account-button {
+    padding-left: 30px;
+  }
+
+  ul.right-nav {
+    justify-self: flex-end;
+  }
+  a,
+  a:visited,
+  a:active {
+    color: $brand-text-color;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: darken($brand-text-color, 20%);
+    text-decoration: underline;
+  }
 }

@@ -11,15 +11,22 @@ interface IMainContainerProps {
   exact?: boolean;
 }
 
-export const Main: React.StatelessComponent<IMainContainerProps> = (props) => {
+export const Main: React.StatelessComponent<IMainContainerProps> = props => {
   const { component: Component, ...rest } = props;
-  return <Route {...rest} render={matchProps =>
-    <div className="wrapper">
-      <Navigation showDashboard={matchProps.location.pathname !== "/dashboard"} />
-      <div className="content">
-        <Component {...matchProps} />
-      </div>
-      <Footer />
-    </div>
-  } />
-}
+  return (
+    <Route
+      {...rest}
+      render={matchProps => (
+        <div className="wrapper">
+          <Navigation
+            showDashboard={matchProps.location.pathname !== "/dashboard"}
+          />
+          <div className="content">
+            <Component {...matchProps} />
+          </div>
+          <Footer />
+        </div>
+      )}
+    />
+  );
+};

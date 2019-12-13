@@ -1,54 +1,53 @@
 @import "../../styles/variables";
 .home {
-    .hero {
-        background-color: #ccc;
-        color: #000;
-        display: flex;
+  .hero {
+    background-color: #ccc;
+    color: #000;
+    display: flex;
 
-        .hero-content {
-            align-items: center;
-            margin: auto 5%;
-            width: 50%;
-            font-size: 3em;
-            font-weight: 700;
-            @media screen and (max-width: 800px) {
-                width: 90%;
-            }
-        }
-
-        width: auto;
-        min-height: 60vh;
-        
+    .hero-content {
+      align-items: center;
+      margin: auto 5%;
+      width: 50%;
+      font-size: 3em;
+      font-weight: 700;
+      @media screen and (max-width: 800px) {
+        width: 90%;
+      }
     }
 
-    article {
-        padding: 1em 5%;
+    width: auto;
+    min-height: 60vh;
+  }
 
-        blockquote {
-            font-size: 1.5em;
-            padding: 5px 10%;
+  article {
+    padding: 1em 5%;
 
-            span.attribution {
-                margin-top: .5em;
-                display: block;
-            }
-        }
+    blockquote {
+      font-size: 1.5em;
+      padding: 5px 10%;
+
+      span.attribution {
+        margin-top: 0.5em;
+        display: block;
+      }
     }
+  }
 
-    .call-to-action {
-        display: flex;
-        justify-content: center;
+  .call-to-action {
+    display: flex;
+    justify-content: center;
+  }
+
+  a.button {
+    border-radius: 10px;
+    padding: 1em;
+    background-color: $brand-bg-color;
+    color: $brand-text-color;
+    text-decoration: none;
+
+    &:hover {
+      background-color: lighten($brand-bg-color, 10%);
     }
-
-    a.button {
-        border-radius: 10px;
-        padding: 1em;
-        background-color: $brand-bg-color;
-        color: $brand-text-color;
-        text-decoration: none;
-
-        &:hover {
-            background-color: lighten($brand-bg-color, 10%);
-        }
-    }
+  }
 }

@@ -7,14 +7,10 @@ export class Footer extends React.Component {
       <footer>
         <div className="container">
           <div className="row">
-            <div className="col-md-12">
-                No Copyright Do. 2019
-            </div>
+            <div className="col-md-12">No Copyright Do. 2019</div>
           </div>
         </div>
       </footer>
-    )
+    );
   }
 }
-
-  
