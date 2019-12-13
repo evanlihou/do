@@ -8,6 +8,7 @@ import * as DateTime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { Redirect } from "react-router-dom";
 
 interface ITaskState {
   taskId: Number;
@@ -15,6 +16,7 @@ interface ITaskState {
 
 interface ITaskProps {
   match: any;
+  history: any;
   isFetching: boolean;
   task: TaskModel;
   taskId: Number;
@@ -58,13 +60,18 @@ class TaskComponent extends React.Component<ITaskProps, ITaskState> {
     this.props.updateTask(task);
   }
 
+  handleWhatChange(value: string, task: TaskModel) {
+    task.what = value;
+    this.props.updateTask(task);
+  }
+
   render() {
     return (
-      <div className="container dashboard">
+      <div className="container task">
         {this.props.isFetching || this.props.task === undefined ? (
           <p>Fetching...</p>
         ) : (
-          <div>
+          <form>
             <h2>
               <label className="checkbox-container">
                 <input
@@ -76,15 +83,32 @@ class TaskComponent extends React.Component<ITaskProps, ITaskState> {
                   <FontAwesomeIcon icon={faCheck} />
                 </span>
               </label>
-              {this.props.task.what}
+              <input
+                value={this.props.task.what}
+                onChange={e =>
+                  this.handleWhatChange(e.target.value, this.props.task)
+                }
+              ></input>
             </h2>
+            <div className="container">
+              <label>Due:</label>
+              <DateTime
+                value={this.props.task.momentWhen}
+                onChange={e => this.handleWhenChange(e)}
+              />
 
-            <label>Due:</label>
-            <DateTime
-              value={this.props.task.momentWhen}
-              onChange={e => this.handleWhenChange(e)}
-            />
-          </div>
+              {/* This button does nothing because changes are automatically saved, but improves UX */}
+              <button
+                onClick={e => {
+                  e.preventDefault();
+                  this.props.history.push("/dashboard");
+                }}
+              >
+                Save
+              </button>
+              <small>Your changes are also saved automatically.</small>
+            </div>
+          </form>
         )}
       </div>
     );

@@ -19,6 +19,9 @@ nav.main-nav {
       }
     }
   }
+  @media screen and (max-width: 800px) {
+    flex-wrap: wrap;
+  }
 
   .quick-add {
     margin: 0 auto;
@@ -31,6 +34,11 @@ nav.main-nav {
       background-color: rgb(209, 207, 207);
       border: none;
     }
+    @media screen and (max-width: 800px) {
+      order: 9;
+      flex-basis: 100%;
+      margin-bottom: 1em;
+    }
   }
 
   .account-button {
@@ -38,7 +46,7 @@ nav.main-nav {
   }
 
   ul.right-nav {
-    justify-self: flex-end;
+    margin-left: auto;
   }
   a,
   a:visited,

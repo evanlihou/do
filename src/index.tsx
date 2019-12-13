@@ -16,9 +16,7 @@ nSQL()
   .createDatabase({
     id: "tasks",
     mode: "PERM",
-    tables: [
-      TaskDbModel
-    ],
+    tables: [TaskDbModel],
     version: 1 // current schema/database version
   })
   .then(() => {

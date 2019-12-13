@@ -2,7 +2,7 @@ import * as moment from "moment";
 
 export class Task {
   public taskId: Number;
-  public what: String;
+  public what: string;
   public when: Date;
   public complete: boolean;
   public momentWhen: moment.Moment;

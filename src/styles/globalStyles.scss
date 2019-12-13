@@ -41,3 +41,27 @@ a:hover {
     color: white;
   }
 }
+
+label {
+  padding-right: 0.3em;
+}
+
+a.button,
+button {
+  border-radius: 10px;
+  border: none;
+  padding: 0.3em;
+  margin: 1em 0;
+  background-color: $brand-bg-color;
+  color: $brand-text-color;
+  text-decoration: none;
+
+  &:hover {
+    background-color: lighten($brand-bg-color, 10%);
+  }
+}
+
+small {
+  display: block;
+  font-style: italic;
+}

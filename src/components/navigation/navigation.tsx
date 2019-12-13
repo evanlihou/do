@@ -68,7 +68,9 @@ class NavigationComponent extends React.Component<
           ""
         )}
         <div className="account-button">
-          <FontAwesomeIcon icon={faUser} />
+          <Link to="/account">
+            <FontAwesomeIcon icon={faUser} />
+          </Link>
         </div>
       </nav>
     );
